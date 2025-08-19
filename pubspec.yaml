@@ -42,9 +42,9 @@ dependencies:
   get: ^4.7.2
   json_annotation: ^4.9.0
   timezone: ^0.10.1
-  flutter_native_timezone: ^2.0.0
+  flutter_timezone: ^4.1.1
   flutter_local_notifications: ^19.4.0
-  google_fonts: 6.0.0
+  google_fonts: ^6.3.0
 
 dev_dependencies:
   flutter_test:

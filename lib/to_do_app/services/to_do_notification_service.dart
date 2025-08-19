@@ -2,7 +2,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:ngozi_s_to_do_app/to_do_app/models/to_do.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest_all.dart' as tzdata;
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 
 abstract interface class TodoNotificationService {
   FlutterLocalNotificationsPlugin get plugin;
@@ -30,9 +30,8 @@ class TodoNotificationServiceImpl implements TodoNotificationService{
 
     //initialize timezone package
     tzdata.initializeTimeZones();
-    final String localtz = await FlutterNativeTimezone.getLocalTimezone();
+    final String localtz = await FlutterTimezone.getLocalTimezone();
     tz.setLocalLocation(tz.getLocation(localtz));
-
   }
 
   @override
